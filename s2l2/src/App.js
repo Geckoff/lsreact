@@ -10,12 +10,14 @@ class App extends Component {
     }
 
     handleNewPost = () => {
-        this.setState(state => {
-            let {newsInput, news} = state;
-            news.push(newsInput);
-            newsInput = '';
-            return {newsInput, news};
-        })
+        // this.setState(state => {
+        //     let {newsInput, news} = state;
+        //     news.push(newsInput);
+        //     newsInput = '';
+        //     return {newsInput, news};
+        // })
+        let {newsInput, news} = this.state;
+        this.setState({ news: [...news, newsInput], newsInput: '' });
     }
 
     handleChange = event => {

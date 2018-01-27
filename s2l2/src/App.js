@@ -5,36 +5,34 @@ import NewsPost from "./NewsPost";
 
 class App extends Component {
     state = {
-        tempString: "",
-        posts: []
+        newsInput: "",
+        news: []
     }
 
-    handleClick = () => {
+    handleNewPost = () => {
         this.setState(state => {
-            let {tempString, posts} = state;
-            posts.push(tempString);
-            tempString = '';
-            return {tempString, posts};
+            let {newsInput, news} = state;
+            news.push(newsInput);
+            newsInput = '';
+            return {newsInput, news};
         })
     }
 
     handleChange = event => {
-        this.setState({tempString: event.target.value});
+        this.setState({newsInput: event.target.value});
     };
 
     render() { 
-        const {tempString, posts} = this.state;
-        console.log(tempString, posts);
+        const {newsInput, news} = this.state;
+        console.log(newsInput, news);
         return (
             <div className="App">
                 <p>test</p>
-                <input onChange={this.handleChange} value={tempString} />
-                <button onClick={this.handleClick}>Add Post</button>
+                <input onChange={this.handleChange} value={newsInput} />
+                <button onClick={this.handleNewPost}>Add Post</button>
                 {
-                    posts.map(post => (
-                        <NewsPost key={post}>
-                            <p  style={{color: 'green'}}>{post}</p>
-                        </NewsPost>
+                    news.map(post => (
+                        <NewsPost post={post} />
                     ))
                 }
                 

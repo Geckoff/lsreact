@@ -31,8 +31,8 @@ class App extends Component {
                 <input onChange={this.handleChange} value={newsInput} />
                 <button onClick={this.handleNewPost}>Add Post</button>
                 {
-                    news.map(post => (
-                        <NewsPost post={post} />
+                    news.map((post, i) => (
+                        <NewsPost post={post} key={i}/>
                     ))
                 }
                 

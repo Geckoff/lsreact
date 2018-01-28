@@ -34,7 +34,7 @@ class App extends Component {
                 <button onClick={this.handleNewPost}>Add Post</button>
                 {
                     news.map((post, i) => (
-                        <NewsPost text={post.text} key={post.text}/>
+                        <NewsPost text={post.text} key={i}/>
                     ))
                 }
                 

@@ -14,6 +14,7 @@ class CardForm extends Component {
     render() {
         return (
             <div className="card-form">
+                <h1>Credit Card Number</h1>
                 <input placeholder="0000000000000000" name="cardNumber" onChange={this.handleChangeForm} />
             </div>
         );

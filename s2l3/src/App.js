@@ -51,26 +51,20 @@ class App extends Component {
         switch (step) {
             case 1:
                 return (
-                    <Fragment>
-                        <h1>Personal Information</h1>
-                        <PersonalForm
-                            firstName={firstName}
-                            lastName={lastName}
-                            email={email}
-                            onChangeForm={this.handleChangeForm}
-                        />
-                    </Fragment>
+                    <PersonalForm
+                        firstName={firstName}
+                        lastName={lastName}
+                        email={email}
+                        onChangeForm={this.handleChangeForm}
+                    />
                 );
             case 2:
-                return (
-                    <Fragment>
-                        <h1>Credit Card Number</h1>
-                        <CardForm
-                            cardNumber={cardNumber}
-                            onChangeForm={this.handleChangeForm}
-                            onChangeTimeOver={this.handleChangeTimeOver}
-                        />
-                    </Fragment>
+                return ( 
+                    <CardForm
+                        cardNumber={cardNumber}
+                        onChangeForm={this.handleChangeForm}
+                        onChangeTimeOver={this.handleChangeTimeOver}
+                    />
                 );
             case 3:
                 return "Поздравляем!";

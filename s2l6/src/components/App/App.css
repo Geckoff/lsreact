@@ -1,0 +1,19 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+#root > div {
+  width: 300px;
+  display: block;
+  float: left;
+}
+
+.order {
+  background: rgb(230, 128, 128);
+  margin-bottom: 10px;
+}
